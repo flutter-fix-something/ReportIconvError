@@ -2,7 +2,7 @@ name: Show error
 
 on:
   workflow_dispatch:
-  push: 
+  push:
 
 jobs:
   build:
@@ -16,4 +16,10 @@ jobs:
       - name: Build arm64
         run: ./build-arm64.sh
       - name: Build x86_64
-        run: ./build-x86_64.sh
+        run: ./build-x86.sh
+      - name: Upload build/meson-logs/meson-log.txt as an artifact
+        if: failure()
+        uses: actions/upload-artifact@v2
+        with:
+          name: meson-log
+          path: build/meson-logs/meson-log.txt
