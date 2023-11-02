@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install meson
-        run: pip install meson
+        run: pip3 install meson
       - name: Build arm64
         run: ./build-arm64.sh
       - name: Build x86_64
