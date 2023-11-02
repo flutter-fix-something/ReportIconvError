@@ -19,7 +19,7 @@ jobs:
         run: ./build-x86.sh
       - name: Upload build/meson-logs/meson-log.txt as an artifact
         if: failure()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: meson-log
           path: build/meson-logs/meson-log.txt
