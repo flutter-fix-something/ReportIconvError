@@ -12,4 +12,4 @@ else
   libiconv = dependency('iconv')
 endif
 
-executable('demo', 'main.c', dependencies : gtkdep)
+executable('demo', 'main.c', dependencies : libiconv)
