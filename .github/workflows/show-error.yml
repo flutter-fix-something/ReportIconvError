@@ -1,7 +1,7 @@
 name: Show error
 
 on:
-  workflow_run: 
+  workflow_dispatch:
   push: 
 
 jobs:
